@@ -31,6 +31,18 @@ class TestStringTokeniser(unittest.TestCase):
         self.assertEqual(expected_result, actual_result)
 
 
+    def test_string_of_two_items_result_list_of_two_strings(self):
+        # arrange
+        input_val = "csharp,python"
+        cut = StringTokeniser()
+        expected_result = ["csharp", "python"]
+
+        # act
+        actual_result = cut.tokenise(input_val)
+
+        # assert
+        self.assertEqual(expected_result, actual_result)
+
 if __name__ == "__main__":
     unittest.main()
 
