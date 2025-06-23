@@ -82,6 +82,19 @@ class TestStringTokeniser(unittest.TestCase):
         self.assertEqual(expected_result, actual_result)
 
 
+    def test_string_of_one_with_preceding_comma_result_list_of_one_spaces_removed(self):
+        # arrange
+        input_val = ",csharp"
+        cut = StringTokeniser()
+        expected_result = ["csharp"]
+
+        # act
+        actual_result = cut.tokenise(input_val)
+
+        # assert
+        self.assertEqual(actual_result, expected_result)
+
+
 if __name__ == "__main__":
     unittest.main()
 
