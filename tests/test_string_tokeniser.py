@@ -43,6 +43,20 @@ class TestStringTokeniser(unittest.TestCase):
         # assert
         self.assertEqual(expected_result, actual_result)
 
+
+    def test_string_of_many_items_no_spaces_result_list_of_many_strings(self):
+        # arrange
+        input_val = "java,C#,python"
+        cut = StringTokeniser()
+        expected_result = ["java", "C#", "python"]
+
+        # act
+        actual_result = cut.tokenise(input_val)
+
+        # assert
+        self.assertEqual(expected_result, actual_result)
+
+
 if __name__ == "__main__":
     unittest.main()
 

@@ -1,7 +1,7 @@
 from app.string_tokeniser import StringTokeniser
 
 def main():
-    input_text = "cleese, palin"
+    input_text = "cleese,palin,chapman"
     tokeniser = StringTokeniser()
     tokens = tokeniser.tokenise(input_text)
     print("Tokens:", tokens)
