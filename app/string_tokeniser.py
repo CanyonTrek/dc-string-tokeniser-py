@@ -10,5 +10,5 @@ class StringTokeniser:
             return []
 
         tokens = input_val.split(",")
-        return [token.strip() for token in tokens if token.strip()]
+        return [token for token in tokens if token.strip()]
 
